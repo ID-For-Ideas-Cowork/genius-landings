@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Día de la Madre — SueñoSimple</title>
+<link rel="stylesheet" href="../css/dia-de-la-madre.css" />
+</head>
+<body>
+  <div class="back-bar">
+    <a href="../index.html">← Volver a SueñoSimple</a>
+  </div>
+
+  <main class="container">
+    <section class="section hero" id="inicio">
+      <h1>Landing Día de la Madre — Prototipo funcional</h1>
+      <p>
+        Esta versión está enfocada en validar estructura, navegación y funcionamiento
+        del formulario. El diseño final y los assets quedan fuera de esta etapa.
+      </p>
+
+      <div class="button-row">
+        <a href="#formulario" class="btn btn-primary">Ir al formulario</a>
+        <a href="#producto" class="btn btn-secondary">Ver producto</a>
+      </div>
+    </section>
+
+    <section class="section" id="formulario">
+      <h2>Registro de leads</h2>
+      <p>
+        Completá tus datos para recibir novedades y ofertas del Día de la Madre.
+      </p>
+
+      <form id="leadForm" novalidate>
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Ingresá tu nombre"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Ingresá tu mail"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Celular</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Ingresá tu celular"
+          />
+        </div>
+
+        <div class="button-row">
+          <button type="submit" class="btn btn-primary">Enviar datos</button>
+        </div>
+
+        <div id="formMessage" class="status-message"></div>
+      </form>
+    </section>
+
+    <section class="section" id="producto">
+      <h2>Espacio de producto</h2>
+      <p>
+        Sección reservada para la línea Económica Pro. En esta etapa se valida la
+        estructura y la acción de compra.
+      </p>
+
+      <div class="product-placeholder">
+        Placeholder de producto / imagen / precio / cuotas
+      </div>
+
+      <p><strong>Producto:</strong> Económica Pro</p>
+      <p><strong>Precio:</strong> $199.999</p>
+      <p><strong>Cuotas:</strong> 12 cuotas sin interés</p>
+
+      <div class="button-row">
+        <a href="checkout-test.html" class="btn btn-secondary">
+          Comprar ahora
+        </a>
+      </div>
+    </section>
+
+    <section class="footer">
+      <p>SueñoSimple</p>
+    </section>
+  </main>
+
+  <script src="../js/dia-de-la-madre.js"></script>
+</body>
+</html>
