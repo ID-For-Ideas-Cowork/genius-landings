@@ -23,6 +23,11 @@ genius-landings/
 ├── index.html                        Inicio — lista de clientes
 ├── css/
 │   └── styles.css                    Estilos compartidos del panel
+├── admin/
+│   ├── index.php                     Dashboard: clientes con métricas de landings y campañas
+│   ├── api.php                       Helper para consumir Budget Manager y Landing CRM
+│   ├── clientes.php                  Gestión de clientes (GL-F07, persistencia pendiente)
+│   └── landings.php                  Registro y listado de landings por cliente (GL-F08)
 ├── suenosimple/
 │   ├── index.html                    Landings de SueñoSimple
 │   └── economica-pro.html            Landing: Economica Pro
@@ -38,6 +43,35 @@ genius-landings/
 ├── .gitignore
 └── requerimientos.html               Solo para el coordinador
 ```
+
+## Panel de administración (PHP)
+
+La carpeta `admin/` contiene un panel de gestión conectado a las APIs internas del ecosistema Genius. A diferencia del panel estático, **requiere un servidor PHP** para funcionar.
+
+### Dependencias externas
+
+| Servicio | Puerto | Para qué se usa |
+|---|---|---|
+| Budget Manager | 8080 | Consultar campañas por cliente |
+| Landing CRM | 3000 | Consultar y registrar landings y leads |
+
+Si alguna de las dos APIs no está corriendo, el panel mostrará una advertencia pero seguirá cargando.
+
+### Cómo levantar el admin
+
+1. Verificá que tenés PHP 8.x instalado:
+   ```bash
+   php -v
+   ```
+2. Iniciá el servidor local desde la raíz del proyecto:
+   ```bash
+   php -S localhost:8000
+   ```
+3. Abrí `http://localhost:8000/admin/` en el navegador.
+
+El panel estático (`index.html`) sigue funcionando sin servidor — no se ve afectado.
+
+---
 
 ## Cómo ver el panel
 
